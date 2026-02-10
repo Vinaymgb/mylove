@@ -48,6 +48,15 @@
       font-size: 1.8em;
     }
 
+    #loveImg {
+      display: none;
+      width: 260px;
+      margin-top: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -76,6 +85,14 @@
 
   <p id="msg"></p>
 
+  <!-- IMAGE -->
+  <img 
+    id="loveImg"
+    src="images/IMG-20251203-WA0011.jpg"
+    alt="My Love ❤️"
+  >
+
+  <!-- MUSIC -->
   <audio id="bgm" loop>
     <source src="love.mp3" type="audio/mpeg">
   </audio>
@@ -84,7 +101,10 @@
     function showLove() {
       // Message
       document.getElementById("msg").innerHTML =
-        "You are my favorite person in the whole universe 🌍❤️   Happy teddy day chinni";
+        "You are my favorite person in the whole universe 🌍❤️ Happy Teddy Day chinni 🧸";
+
+      // Show image
+      document.getElementById("loveImg").style.display = "block";
 
       // Play music
       document.getElementById("bgm").play();
